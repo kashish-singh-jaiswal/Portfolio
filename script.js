@@ -7,15 +7,15 @@ const typewriter = new Typewriter(app, { loop: true });
 
 typewriter
   .typeString("Hi, I'm Kashish")
-  .pauseFor(1500)
+  .pauseFor(100)
   .deleteAll()
   .typeString("Full Stack Developer 💻")
-  .pauseFor(1500)
+  .pauseFor(100)
   .typeString("MERN Stack Enthusiast 🌐")
-  .pauseFor(1500)
+  .pauseFor(100)
   .deleteAll()
   .typeString("Problem Solver 🚀")
-  .pauseFor(1500)
+  .pauseFor(100)
   .start();
 
 // Back to Top Button
