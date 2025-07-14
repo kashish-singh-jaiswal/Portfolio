@@ -2,7 +2,7 @@
 const typewriter = document.getElementById('typewriter');
 if (typewriter) {
   new Typewriter(typewriter, {
-    strings: ['Hi, I\'m Kashish.', 'Full Stack Developer.', 'MERN | Flask | ML'],
+    strings: ['Hi, I\'m Kashish.', 'Full Stack Developer.'],
     autoStart: true,
     loop: true,
   });

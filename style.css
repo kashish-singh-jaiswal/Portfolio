@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hero Section Gradient Animation */
 .hero-gradient {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -16,6 +17,7 @@ html {
   100% { background-position: 0% 50%; }
 }
 
+/* About Section */
 .bg-dark-subtle {
   background-color: #111827 !important;
 }
@@ -35,6 +37,7 @@ html {
   transition: 0.3s ease;
 }
 
+/* Skills */
 .skill-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #1f2937;
@@ -47,6 +50,31 @@ html {
   box-shadow: 0 0 15px rgba(13, 202, 240, 0.4);
 }
 
+.skill-card-enhanced {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  background-color: #1f2937;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(13, 202, 240, 0.2);
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.skill-card-enhanced:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.7);
+  cursor: pointer;
+}
+
+/* Make horizontal scrolling snap clean */
+.d-flex.overflow-auto {
+  scroll-snap-type: x mandatory;
+}
+
+/* Projects */
 .project-card {
   border: none;
   transition: transform 0.3s ease;
@@ -56,6 +84,7 @@ html {
   transform: scale(1.03);
 }
 
+/* Back to Top Button */
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -74,4 +103,16 @@ html {
 
 #back-to-top:hover {
   background: #05b0da;
+}
+
+.skill-card-glow {
+  background-color: #1f2937;
+  box-shadow: 0 0 12px rgba(13, 202, 240, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(13, 202, 240, 0.6);
+  cursor: pointer;
 }
