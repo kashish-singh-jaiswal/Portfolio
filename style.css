@@ -11,18 +11,8 @@ html {
   padding: 3rem 1rem;
 }
 
-.hero-img {
-  border: 4px solid #0dcaf0;
-  box-shadow: 0 0 15px rgba(13, 202, 240, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 200px;
-  height: 200px; /* Crucial for a perfect circle, width and height must match */
-  object-fit: cover; /* Prevents stretching and ensures the image covers the area */
-}
-
-.hero-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(13, 202, 240, 0.5);
+.Typewriter__cursor {
+  display: none !important;
 }
 
 
