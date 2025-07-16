@@ -34,26 +34,30 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-gradient text-white d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+  <!-- Hero Section -->
+<section id="home" class="hero-gradient text-white d-flex align-items-center position-relative overflow-hidden">
+  <!-- ✅ Gradient Background Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-br from-gray-900 via-purple-900 bg-opacity-25 to-gray-900" style="z-index: 0;"></div>
 
-        <!-- Left: Text -->
-        <div class="col-md-6 text-center text-md-start">
-          <h1 class="display-4 fw-bold mb-3">Hi, I'm Kashish</h1>
-          <p class="lead mb-4">Full Stack Developer (MERN Stack)</p>
-          <a href="#projects" class="btn btn-primary me-2">View Projects</a>
-          <a href="#contact" class="btn btn-outline-light">Get in Touch</a>
-        </div>
+  <!-- ✅ Main Container (z-1 to stay above the overlay) -->
+  <div class="container position-relative" style="z-index: 1;">
+    <div class="row align-items-center">
 
-        <!-- Right: Neon Image -->
-        <div class="col-md-6 text-center mt-4 mt-md-0">
-          <img src="your-image.png" alt="Profile" class="neon-hero-img">
-        </div>
+      <!-- Left: Text -->
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-4 fw-bold mb-3">Hi, I'm Kashish</h1>
+        <p class="lead mb-4">Full Stack Developer (MERN Stack)</p>
+        <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+        <a href="#contact" class="btn btn-outline-light">Get in Touch</a>
+      </div>
 
+      <!-- Right: Neon Image -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img alt="Code illustration" class="rounded-lg shadow-2xl z-10 position-relative" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcF6U85PnULQQQ2aZPjINGuSbuKSJ0dBjCPg&amp;s">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- About -->
   <section id="about" class="about-section py-5">

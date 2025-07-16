@@ -3,15 +3,48 @@ html {
 }
 
 /* ========== HERO SECTION ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Neon-Styled Hero Background (static) */
 .hero-gradient {
+  position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #090d2c, #1a0752, #3b005d, #6a007a, #ae00a4);
   padding: 5rem 1rem;
+  background: linear-gradient(
+    to bottom right,
+    #111827 0%,             /* from-gray-900 */
+    rgba(88, 28, 135, 0.2) 50%, /* via-purple-900/20 (88,28,135 is approx. Tailwind's purple-900) */
+    #111827 100%            /* to-gray-900 */
+  );
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: white;
+  overflow: hidden;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom right,
+    #111827,
+    rgba(88, 28, 135, 0.2),
+    #111827
+  );
+  pointer-events: none;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #111827, rgba(88, 28, 135, 0.2), #111827);
+  z-index: 0;
 }
 
 /* Typewriter cursor hidden */
