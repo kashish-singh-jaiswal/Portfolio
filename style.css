@@ -132,7 +132,7 @@ html {
   cursor: pointer;
 }
 
-.circular-image {
+.hero-img {
     width: 200px;
     height: 200px; /*  Crucial for a perfect circle, width and height must match */
     object-fit: cover; /* Prevents stretching and ensures the image covers the area */
