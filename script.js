@@ -1,14 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize AOS animations
+  if (typeof AOS !== 'undefined') {
+    AOS.init();
+  }
+
   // === Typewriter Effect ===
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement && typeof Typewriter !== 'undefined') {
-    new Typewriter(typewriterElement, {
-      strings: ["Hi, I'm Kashish.", "Welcome to my portfolio.", "Let's build something amazing together!"],
-      autoStart: true,
+    const typewriter = new Typewriter(typewriterElement, {
       loop: true,
       delay: 75,
       deleteSpeed: 50,
+      autoStart: true,
+      strings: [
+        "Hi, I'm Kashish.",
+        "Welcome to my portfolio.",
+        "Let's build something amazing together!"
+      ]
     });
+
+    // Optionally, you can use chained methods if needed:
+    // typewriter
+    //   .typeString("Hi, I'm Kashish")
+    //   .pauseFor(1000)
+    //   .deleteAll()
+    //   .typeString("Full Stack Developer")
+    //   .pauseFor(1000)
+    //   .start();
   }
 
   // === Back to Top Button ===
@@ -42,3 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBackToTop();
   }
 });
+=======
+AOS.init();
+
+  const typewriter = new Typewriter(document.getElementById('typewriter'), {
+    loop: true,
+    delay: 75,
+  });
+
+  typewriter
+    .typeString("Hi, I'm Kashish")
+    .pauseFor(1000)
+    .deleteAll()
+    .typeString("Full Stack Developer")
+    .pauseFor(1000)
+    .start();
+>>>>>>> 8d5add6a33c0565698c1cff3c2c09b43f30c9eec
