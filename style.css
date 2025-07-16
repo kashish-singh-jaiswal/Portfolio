@@ -2,27 +2,43 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero Section Gradient Animation */
+/* ========== HERO SECTION ========== */
 .hero-gradient {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #090d2c, #1a0752, #3b005d, #6a007a, #ae00a4);
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
+/* Typewriter cursor hidden */
 .Typewriter__cursor {
   display: none !important;
 }
 
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Neon Circular Hero Image */
+.neon-hero-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #a100ff;
+  box-shadow:
+    0 0 15px #ff00ff,
+    0 0 25px #9900ff,
+    0 0 45px #6f00ff;
+  transition: transform 0.3s ease;
 }
 
-/* About Section */
+.neon-hero-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ========== ABOUT SECTION ========== */
 .bg-dark-subtle {
   background-color: #111827 !important;
 }
@@ -42,7 +58,8 @@ html {
   transition: 0.3s ease;
 }
 
-/* Skills */
+
+/* ========== SKILLS SECTION ========== */
 .skill-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #1f2937;
@@ -74,12 +91,25 @@ html {
   cursor: pointer;
 }
 
-/* Make horizontal scrolling snap clean */
+/* Horizontal scroll snap */
 .d-flex.overflow-auto {
   scroll-snap-type: x mandatory;
 }
 
-/* Projects */
+.skill-card-glow {
+  background-color: #1f2937;
+  box-shadow: 0 0 12px rgba(13, 202, 240, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(13, 202, 240, 0.6);
+  cursor: pointer;
+}
+
+
+/* ========== PROJECT CARD ========== */
 .project-card {
   border: none;
   transition: transform 0.3s ease;
@@ -89,7 +119,17 @@ html {
   transform: scale(1.03);
 }
 
-/* Back to Top Button */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* ========== BACK TO TOP BUTTON ========== */
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -109,23 +149,3 @@ html {
 #back-to-top:hover {
   background: #05b0da;
 }
-
-.skill-card-glow {
-  background-color: #1f2937;
-  box-shadow: 0 0 12px rgba(13, 202, 240, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card-glow:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(13, 202, 240, 0.6);
-  cursor: pointer;
-}
-
-.hero-img {
-    width: 200px;
-    height: 200px; /*  Crucial for a perfect circle, width and height must match */
-    object-fit: cover; /* Prevents stretching and ensures the image covers the area */
-    border-radius: 50%; /* Rounds the corners for a circular shape */
-}
-
